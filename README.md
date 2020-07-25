@@ -1,8 +1,10 @@
 ### Windows File Recovery GUI
 
----
+A simple GUI for Windows File Recovery CLI Tool.
 
-Golang + [GoVCL](https://github.com/ying32/govcl) + [Lazarus](http://www.lazarus-ide.org/) + [Res2go](https://github.com/ying32/govcl/blob/master/Tools/res2go)
+Golang + [GoVCL](https://github.com/ying32/govcl) + [Lazarus](http://www.lazarus-ide.org/) + [Res2go](https://github.com/ying32/govcl/blob/master/Tools/res2go).
+
+---
 
 #### How to build this repo with debug windows?
 
@@ -26,3 +28,4 @@ Not yet.
 
 #### Give me a demo
 
+![demo1](https://github.com/6r6/Windows-File-Recovery-GUI/raw/master/LazarusProjectUI/DEMO1.png)
