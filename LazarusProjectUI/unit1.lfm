@@ -1,0 +1,267 @@
+object Form1: TForm1
+  Left = 424
+  Height = 517
+  Top = 105
+  Width = 673
+  Caption = 'Windows File Recovery GUI'
+  ClientHeight = 497
+  ClientWidth = 673
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object Panel2: TPanel
+    Left = 45
+    Height = 84
+    Top = 37
+    Width = 595
+    BevelColor = clBlack
+    TabOrder = 5
+  end
+  object Edit1: TEdit
+    Left = 48
+    Height = 25
+    Top = 48
+    Width = 521
+    AutoSelect = False
+    Color = clMenu
+    OnChange = Edit1Change
+    ReadOnly = True
+    TabOrder = 1
+    Text = 'Please select the drive where the file is missing...'
+  end
+  object Button1: TButton
+    Left = 571
+    Height = 25
+    Top = 48
+    Width = 62
+    Caption = 'Select'
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 48
+    Height = 25
+    Top = 88
+    Width = 521
+    AutoSelect = False
+    Color = clMenu
+    OnChange = Edit1Change
+    ReadOnly = True
+    TabOrder = 2
+    Text = 'Please select the target drive of the restored file (not the same as above)...'
+  end
+  object Panel1: TPanel
+    Left = 46
+    Height = 264
+    Top = 136
+    Width = 596
+    BevelColor = clBlack
+    ClientHeight = 264
+    ClientWidth = 596
+    TabOrder = 4
+    OnClick = Panel1Click
+    object RadioButton1: TRadioButton
+      Left = 16
+      Height = 21
+      Top = 32
+      Width = 92
+      Caption = 'Just deleted'
+      OnChange = RadioButton1Change
+      TabOrder = 0
+    end
+    object RadioButton2: TRadioButton
+      Left = 104
+      Height = 21
+      Top = 32
+      Width = 119
+      Caption = 'Deleted for days'
+      OnChange = RadioButton2Change
+      TabOrder = 1
+    end
+    object RadioButton3: TRadioButton
+      Left = 224
+      Height = 21
+      Top = 32
+      Width = 130
+      Caption = 'Already Formatted'
+      OnChange = RadioButton3Change
+      TabOrder = 2
+    end
+    object RadioButton4: TRadioButton
+      Left = 352
+      Height = 21
+      Top = 32
+      Width = 126
+      Caption = 'Already damaged'
+      OnChange = RadioButton4Change
+      TabOrder = 3
+    end
+    object RadioButton5: TRadioButton
+      Left = 480
+      Height = 21
+      Top = 32
+      Width = 115
+      Caption = 'FAT/exFAT/ReFS'
+      OnChange = RadioButton5Change
+      TabOrder = 4
+    end
+    object Label1: TLabel
+      Left = 19
+      Height = 12
+      Top = 8
+      Width = 189
+      Caption = 'The file is lost like this:'
+      Font.CharSet = GB2312_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = '新宋体'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 19
+      Height = 12
+      Top = 80
+      Width = 335
+      Caption = 'I want to restore the following types of files：'
+      Font.CharSet = GB2312_CHARSET
+      Font.Color = clBlack
+      Font.Height = -12
+      Font.Name = '新宋体'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckBox1: TCheckBox
+      Left = 19
+      Height = 21
+      Top = 104
+      Width = 181
+      Caption = 'Audio(wma, wmv, asf, mp3)'
+      OnChange = CheckBox1Change
+      TabOrder = 5
+    end
+    object CheckBox2: TCheckBox
+      Left = 224
+      Height = 21
+      Top = 104
+      Width = 229
+      Caption = 'Image(jpg, jpeg, jpe, jif, jfif, jfi, png)'
+      TabOrder = 6
+    end
+    object CheckBox3: TCheckBox
+      Left = 19
+      Height = 21
+      Top = 136
+      Width = 372
+      Caption = 'Video(mpeg, mp4, mpg, m4a, m4v, m4b, m4r, mov, 3gp, qt)'
+      OnChange = CheckBox3Change
+      TabOrder = 7
+    end
+    object CheckBox4: TCheckBox
+      Left = 19
+      Height = 21
+      Top = 168
+      Width = 493
+      Caption = 'Zip and Document(zip, pdf, docx, xlsx, pptx, odt, ods, odp, odg, odi, odf, odc, ...)'
+      OnChange = CheckBox4Change
+      ParentShowHint = False
+      TabOrder = 8
+    end
+    object CheckBox5: TCheckBox
+      Left = 19
+      Height = 21
+      Top = 204
+      Width = 64
+      Caption = 'Others:'
+      TabOrder = 10
+    end
+    object Edit3: TEdit
+      Left = 80
+      Height = 25
+      Top = 200
+      Width = 104
+      TabOrder = 9
+      Text = 'cad,map,tmp'
+    end
+    object CheckBox6: TCheckBox
+      Left = 224
+      Height = 21
+      Top = 204
+      Width = 139
+      Caption = 'Filename Contains：'
+      TabOrder = 11
+    end
+    object Edit4: TEdit
+      Left = 360
+      Height = 25
+      Top = 200
+      Width = 122
+      TabOrder = 12
+      Text = 'happy'
+    end
+  end
+  object Button2: TButton
+    Left = 571
+    Height = 25
+    Top = 88
+    Width = 62
+    Caption = 'Select'
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 45
+    Height = 42
+    Top = 412
+    Width = 195
+    Caption = 'Recovery Now!'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Label4: TLabel
+    Left = 45
+    Height = 17
+    Top = 5
+    Width = 165
+    Caption = 'Your WindowsOS ReleaseId:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 224
+    Height = 17
+    Top = 5
+    Width = 28
+    Caption = '2400'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clBlue
+    Font.Height = -12
+    Font.Name = 'Microsoft YaHei UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    Left = 472
+    Top = 432
+  end
+  object MainMenu1: TMainMenu
+    Left = 520
+    Top = 432
+    object MenuItem1: TMenuItem
+      Caption = 'Help(H)'
+      OnClick = MenuItem1Click
+      object MenuItem3: TMenuItem
+        Caption = 'Guide'
+        OnClick = MenuItem3Click
+      end
+      object MenuItem2: TMenuItem
+        Caption = 'About'
+      end
+    end
+  end
+end
